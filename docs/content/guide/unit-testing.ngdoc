@@ -144,6 +144,13 @@ before each test. Then we can use `inject` to access `$controller`, the service 
 for instantiating controllers.
 
 ```js
+// In following 2 lines: [angular.mock] is avaible after putting this line in the html page
+//      <script src="angular-mocks.js"></script>
+//      where angular-mocks.js is obtained from 
+//      https://raw.githubusercontent.com/angular/bower-angular-mocks/v1.4.1/angular-mocks.js
+var module = angular.mock.module;
+var inject = angular.mock.inject;
+
 describe('PasswordController', function() {
   beforeEach(module('app'));
 
